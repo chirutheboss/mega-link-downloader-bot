@@ -4,7 +4,7 @@ from pyrogram import Client
 # Import configuration based on environment variable
 from sample_config import Config  # Adjust this import as per your actual configuration setup
 
-async def start():
+async def start(app):
     print("Starting bot...")
     await app.start()
     print("Bot started.")
@@ -20,7 +20,7 @@ async def main():
     # Add your message handlers and other bot functionality here
 
     # Start the bot
-    await start()
+    await start(app)
 
 if __name__ == "__main__":
     asyncio.run(main())
